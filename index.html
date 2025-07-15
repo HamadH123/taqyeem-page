@@ -1,129 +1,120 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>تقييم القدرات - معسكر طويق</title>
-<style>
-  body {
-    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; padding: 0; color: #222;
-  }
-  .container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.92);
-    padding: 25px 35px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  }
-  h1,h2 {
-    text-align: center;
-    color: #4C4AFF;
-    font-weight: 700;
-  }
-  label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
-  }
-  input[type=text], input[type=tel], select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-  }
-  button, .button-link {
-    background-color: #4C4AFF;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 1.1em;
-    cursor: pointer;
-    margin-top: 20px;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s ease;
-  }
-  button:hover, .button-link:hover {
-    background-color: #3a3fbf;
-  }
-  #startCourse {
-    display: none;
-  }
-  .agree-label {
-    margin-top: 20px;
-    font-weight: normal;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>مبادرة تقييم القدرات – معسكر طويق</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1548092372-0d1bd40894a3');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .container {
+      background: rgba(0,0,0,0.7);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input, select, button {
+      display: block;
+      width: 90%;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      background-color: #00c3a5;
+      color: white;
+      cursor: pointer;
+    }
+
+    #start-course {
+      display: none;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
+
   <div class="container">
-    <h1>🎓 مبادرة تقييم القدرات – معسكر طويق (نسخة تجريبية)</h1>
-    <h2>🔬 تحليل ذكي لمستوى قدراتك الذهنية والمنطقية واللفظية والحسابية</h2>
+    <h2>🎓 مبادرة تقييم القدرات – معسكر طويق (نسخة تجريبية)</h2>
+    <p>🔬 تحليل ذكي لمستوى قدراتك الذهنية والمنطقية واللفظية والحسابية</p>
     <form id="infoForm">
-      <label for="fullName">اسمك الكامل:</label>
-      <input type="text" id="fullName" name="fullName" required />
+      <label for="name">الاسم الكامل:</label>
+      <input type="text" id="name" name="name" required>
 
-      <label for="phoneNumber">رقم الجوال (واتساب):</label>
-      <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{9,15}" required />
+      <label for="phone">رقم الجوال:</label>
+      <input type="tel" id="phone" name="phone" required>
 
-      <label for="age">العمر:</label>
-      <input type="text" id="age" name="age" required />
-
-      <label for="deviceType">نوع الجهاز المستخدم:</label>
-      <select id="deviceType" name="deviceType" required>
-        <option value="">اختر الجهاز</option>
-        <option value="هاتف ذكي">هاتف ذكي</option>
-        <option value="حاسوب">حاسوب</option>
-        <option value="جهاز لوحي">جهاز لوحي</option>
-        <option value="آخر">آخر</option>
+      <label for="city">موقعك الجغرافي المفضل لحضور أي فعالية مستقبلية:</label>
+      <select id="city" name="city" required>
+        <option value="">اختر المدينة الأقرب لك</option>
+        <option value="الرياض">الرياض</option>
+        <option value="جدة">جدة</option>
+        <option value="مكة">مكة</option>
+        <option value="الدمام">الدمام</option>
+        <option value="المدينة المنورة">المدينة المنورة</option>
+        <option value="أخرى">أخرى</option>
       </select>
 
-      <label class="agree-label">
-        <input type="checkbox" id="agreeTerms" required />
-        أوافق على استخدام بياناتي لتحسين تجربتي في مبادرة تقييم القدرات – معسكر طويق.
+      <label for="deviceType">الجهاز اللي تستخدمه حاليًا:</label>
+      <select id="deviceType" name="deviceType" required>
+        <option value="">اختر نوع الجهاز</option>
+        <option value="هاتف">هاتف</option>
+        <option value="جهاز لوحي">جهاز لوحي</option>
+        <option value="كمبيوتر">كمبيوتر</option>
+      </select>
+
+      <label for="os">نظام التشغيل لجهازك الحالي (لتحسين التوافق):</label>
+      <select id="os" name="os" required>
+        <option value="">اختر النظام</option>
+        <option value="iOS">iOS</option>
+        <option value="Android">Android</option>
+        <option value="Windows">Windows</option>
+        <option value="macOS">macOS</option>
+        <option value="Linux">Linux</option>
+        <option value="غير ذلك">غير ذلك</option>
+      </select>
+
+      <label for="password">رمز مفضل (اختياري):</label>
+      <input type="text" id="password" name="password" placeholder="مثال: آخر 4 أرقام من رقمك أو أي رمز تتذكره">
+
+      <label>
+        <input type="checkbox" id="agree" required>
+        أوافق على استخدام بياناتي لتحسين تجربتي في المبادرة
       </label>
 
       <button type="submit">إرسال المعلومات</button>
     </form>
 
-    <a href="https://hamadh123.github.io/taqyeem-page/course.html" id="startCourse" class="button-link" target="_blank" rel="noopener">ابدأ الدورة الآن</a>
+    <div id="start-course">
+      <p>✅ تم تسجيل بياناتك بنجاح! الآن يمكنك بدء الدورة 👇</p>
+      <a href="https://hamadh123.github.io/taqyeem-page/course.html">
+        <button>ابدأ الدورة الآن</button>
+      </a>
+    </div>
   </div>
 
-<script>
-  const form = document.getElementById('infoForm');
-  const startBtn = document.getElementById('startCourse');
+  <script>
+    const form = document.getElementById("infoForm");
+    const courseSection = document.getElementById("start-course");
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      courseSection.style.display = "block";
+      form.style.display = "none";
+    });
+  </script>
 
-    // تأكد من تعبئة النموذج
-    if (!form.checkValidity()) {
-      alert('يرجى تعبئة جميع الحقول بشكل صحيح.');
-      return;
-    }
-
-    // إذا وافق على الشروط
-    if (!document.getElementById('agreeTerms').checked) {
-      alert('لا يمكن الاستمرار دون الموافقة على تحسين تجربتك.');
-      return;
-    }
-
-    // هنا ممكن تضيف كود لإرسال البيانات إلى سيرفر أو API
-    // حالياً مجرد عرض زر البدء وإخفاء النموذج
-    form.style.display = 'none';
-    startBtn.style.display = 'inline-block';
-  });
-</script>
 </body>
 </html>
