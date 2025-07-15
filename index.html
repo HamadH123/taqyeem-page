@@ -1,112 +1,73 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>مبادرة تقييم القدرات – معسكر طويق</title>
+  <title>تقييم القدرات - معسكر طويق</title>
   <style>
     body {
-      margin: 0;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.3em;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-      position: relative;
-      z-index: 1;
-    }
-    p {
-      font-size: 1.3rem;
-      margin-bottom: 2em;
-      max-width: 600px;
-      line-height: 1.5;
-      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
-      position: relative;
-      z-index: 1;
-    }
-    .btn {
-      position: relative;
-      z-index: 1;
-      display: inline-block;
-      background-color: #ff9800;
+      margin: 0;
+      padding: 0;
       color: #222;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 25px 35px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #4C4AFF;
       font-weight: 700;
-      font-size: 1.4rem;
-      padding: 15px 40px;
-      margin: 10px 15px;
-      border-radius: 50px;
+    }
+    button {
+      background-color: #4C4AFF;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 1.1em;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #3a3fbf;
+    }
+    a.button-link {
+      display: inline-block;
       text-decoration: none;
-      box-shadow: 0 6px 15px rgba(255, 152, 0, 0.6);
-      transition: background-color 0.3s ease, color 0.3s ease;
+      background-color: #4C4AFF;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      text-align: center;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
     }
-    .btn:hover {
-      background-color: #e67e22;
-      color: #fff;
-      box-shadow: 0 10px 25px rgba(230, 126, 34, 0.8);
-    }
-    .btn.disabled {
-      background-color: #555 !important;
-      color: #aaa !important;
-      cursor: not-allowed;
-      box-shadow: none;
-    }
-    footer {
-      margin-top: auto;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.6);
-      padding: 15px 0;
-      position: relative;
-      z-index: 1;
-    }
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.2rem;
-      }
-      p {
-        font-size: 1.1rem;
-      }
-      .btn {
-        font-size: 1.2rem;
-        padding: 12px 30px;
-        margin: 8px 10px;
-      }
+    a.button-link:hover {
+      background-color: #3a3fbf;
     }
   </style>
-  <script>
-    // بعد التسجيل في النموذج، توجه تلقائي للدورة بعد 3 ثواني
-    function redirectAfterDelay() {
-      setTimeout(() => {
-        window.location.href = "https://hamadh123.github.io/taqyeem-page/course.html";
-      }, 3000);
-    }
-  </script>
 </head>
 <body>
-  <h1>🎓 مبادرة تقييم القدرات – معسكر طويق (نسخة تجريبية)</h1>
-  <p>🔬 تحليل ذكي لمستوى قدراتك الذهنية والمنطقية واللفظية والحسابية<br><br>
-  📍 الآن يمكنك التسجيل مجانًا والحصول على تقييمك الشخصي خلال دقائق!<br><br>
-  📝 فقط عبئ هذا النموذج 👇<br>
-  🔗 <a href="https://tally.so/r/n9AGZV" target="_blank" rel="noopener" onclick="redirectAfterDelay()" style="color:#ff9800; text-decoration: underline;">https://tally.so/r/n9AGZV</a><br><br>
-  ⚠️ عدد المقاعد في الإصدار الأول محدود<br>
-  📌 التقييم تجريبي، وبياناتك تُستخدم فقط لأغراض تحليلية ضمن مشروع تدريبي
-  </p>
-
-  <a href="https://tally.so/r/n9AGZV" target="_blank" class="btn" rel="noopener" onclick="redirectAfterDelay()">ابدأ التقييم</a>
-  <a href="#" class="btn disabled" aria-disabled="true" tabindex="-1">الدورة التدريبية (مقفلة)</a>
-
-  <footer>© 2025 مبادرة تقييم القدرات – معسكر طويق</footer>
+  <div class="container">
+    <h1>🎓 مبادرة تقييم القدرات – معسكر طويق (نسخة تجريبية)</h1>
+    <h2>🔬 تحليل ذكي لمستوى قدراتك الذهنية والمنطقية واللفظية والحسابية</h2>
+    <p>📍 الآن يمكنك التسجيل مجانًا والحصول على تقييمك الشخصي خلال دقائق!</p>
+    <p>📝 فقط عبئ هذا النموذج 👇</p>
+    <p><a href="https://tally.so/r/n9AGZV" class="button-link" target="_blank" rel="noopener">🔗 ابدأ التسجيل الآن</a></p>
+    <p>⚠️ عدد المقاعد في الإصدار الأول محدود</p>
+    <p>📌 التقييم تجريبي، وبياناتك تُستخدم فقط لأغراض تحليلية ضمن مشروع تدريبي</p>
+  </div>
 </body>
 </html>
