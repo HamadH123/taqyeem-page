@@ -1,120 +1,148 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>مبادرة تقييم القدرات – معسكر طويق</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1548092372-0d1bd40894a3');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-align: center;
-      padding: 40px;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      margin: 0;
+      padding: 0;
+      color: #f0f0f0;
     }
-
     .container {
-      background: rgba(0,0,0,0.7);
-      padding: 30px;
-      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 25px 30px;
       max-width: 600px;
-      margin: auto;
+      margin: 70px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.7);
     }
-
-    input, select, button {
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    label {
       display: block;
-      width: 90%;
-      margin: 10px auto;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 5px;
       border: none;
+      margin-top: 6px;
+      font-size: 15px;
     }
-
     button {
-      background-color: #00c3a5;
+      margin-top: 20px;
+      background-color: #00b894;
       color: white;
+      padding: 12px;
+      width: 100%;
+      font-size: 17px;
+      border: none;
+      border-radius: 7px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-
-    #start-course {
-      display: none;
-      margin-top: 30px;
+    button:hover {
+      background-color: #019875;
+    }
+    .note {
+      font-size: 13px;
+      margin-top: 15px;
+      color: #d3d3d3;
+      line-height: 1.3;
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <h2>🎓 مبادرة تقييم القدرات – معسكر طويق (نسخة تجريبية)</h2>
-    <p>🔬 تحليل ذكي لمستوى قدراتك الذهنية والمنطقية واللفظية والحسابية</p>
-    <form id="infoForm">
-      <label for="name">الاسم الكامل:</label>
-      <input type="text" id="name" name="name" required>
+    <h1>🎓 تقييم القدرات – معسكر طويق (تجريبي)</h1>
+    <form id="form">
+      <label>الاسم الكامل:</label>
+      <input type="text" name="name" required />
 
-      <label for="phone">رقم الجوال:</label>
-      <input type="tel" id="phone" name="phone" required>
+      <label>رقم الجوال:</label>
+      <input type="tel" name="phone" required />
 
-      <label for="city">موقعك الجغرافي المفضل لحضور أي فعالية مستقبلية:</label>
-      <select id="city" name="city" required>
-        <option value="">اختر المدينة الأقرب لك</option>
-        <option value="الرياض">الرياض</option>
-        <option value="جدة">جدة</option>
-        <option value="مكة">مكة</option>
-        <option value="الدمام">الدمام</option>
-        <option value="المدينة المنورة">المدينة المنورة</option>
-        <option value="أخرى">أخرى</option>
+      <label>المدينة:</label>
+      <select name="city" required>
+        <option value="">اختر المدينة</option>
+        <option>الرياض</option>
+        <option>جدة</option>
+        <option>الدمام</option>
+        <option>مكة</option>
+        <option>المدينة المنورة</option>
+        <option>أخرى</option>
       </select>
 
-      <label for="deviceType">الجهاز اللي تستخدمه حاليًا:</label>
-      <select id="deviceType" name="deviceType" required>
+      <label>نوع الجهاز:</label>
+      <select name="device" required>
         <option value="">اختر نوع الجهاز</option>
-        <option value="هاتف">هاتف</option>
-        <option value="جهاز لوحي">جهاز لوحي</option>
-        <option value="كمبيوتر">كمبيوتر</option>
+        <option>جوال</option>
+        <option>كمبيوتر</option>
+        <option>تابلت</option>
       </select>
 
-      <label for="os">نظام التشغيل لجهازك الحالي (لتحسين التوافق):</label>
-      <select id="os" name="os" required>
+      <label>نظام التشغيل:</label>
+      <select name="os" required>
         <option value="">اختر النظام</option>
-        <option value="iOS">iOS</option>
-        <option value="Android">Android</option>
-        <option value="Windows">Windows</option>
-        <option value="macOS">macOS</option>
-        <option value="Linux">Linux</option>
-        <option value="غير ذلك">غير ذلك</option>
+        <option>iOS</option>
+        <option>Android</option>
+        <option>Windows</option>
+        <option>Mac</option>
+        <option>Linux</option>
       </select>
 
-      <label for="password">رمز مفضل (اختياري):</label>
-      <input type="text" id="password" name="password" placeholder="مثال: آخر 4 أرقام من رقمك أو أي رمز تتذكره">
+      <label>رمز دخول مفضل (اختياري):</label>
+      <input type="text" name="code" />
 
-      <label>
-        <input type="checkbox" id="agree" required>
-        أوافق على استخدام بياناتي لتحسين تجربتي في المبادرة
-      </label>
+      <label>هل تود تحسين تجربتك معنا؟</label>
+      <select name="agree" required>
+        <option value="">اختر</option>
+        <option value="نعم">نعم</option>
+        <option value="لا">لا</option>
+      </select>
 
-      <button type="submit">إرسال المعلومات</button>
+      <label>هل تستخدم واي فاي أم بيانات؟</label>
+      <select name="connection" required>
+        <option value="">اختر</option>
+        <option>واي فاي</option>
+        <option>بيانات</option>
+      </select>
+
+      <label>ما هو تقييمك لمظهر النموذج؟</label>
+      <select name="rating" required>
+        <option value="">اختر</option>
+        <option>ممتاز</option>
+        <option>جيد</option>
+        <option>يحتاج تحسين</option>
+      </select>
+
+      <label>ملاحظات إضافية (اختياري):</label>
+      <textarea name="notes" rows="3"></textarea>
+
+      <div class="note">
+        بياناتك تُستخدم فقط لتحسين تجربتك ضمن المبادرة. للمزيد: support@tawqinitiative.com
+      </div>
+
+      <button type="submit">إرسال وبدء الدورة</button>
     </form>
-
-    <div id="start-course">
-      <p>✅ تم تسجيل بياناتك بنجاح! الآن يمكنك بدء الدورة 👇</p>
-      <a href="https://hamadh123.github.io/taqyeem-page/course.html">
-        <button>ابدأ الدورة الآن</button>
-      </a>
-    </div>
   </div>
 
   <script>
-    const form = document.getElementById("infoForm");
-    const courseSection = document.getElementById("start-course");
-
-    form.addEventListener("submit", function(e) {
+    const form = document.getElementById('form');
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
-      courseSection.style.display = "block";
-      form.style.display = "none";
+      alert("✅ تم استلام بياناتك بنجاح! جاري تحويلك إلى الدورة...");
+      window.location.href = "https://hamadh123.github.io/taqyeem-page/course.html";
     });
   </script>
-
 </body>
 </html>
